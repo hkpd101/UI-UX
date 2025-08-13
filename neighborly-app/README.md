@@ -1,69 +1,65 @@
-# React + TypeScript + Vite
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+# Neighborly – Local Community Connector App
 
-Currently, two official plugins are available:
+Neighborly is a mobile-first web application that helps neighbors connect, share skills, organize events, and build stronger communities.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Features
+- **Home Feed:** Find help, offer help, see local events and announcements.
+- **Skills Marketplace:** Search and connect with local skill providers.
+- **Events:** Discover and join community events.
+- **Groups:** Join and manage community groups.
+- **Mobile-optimized UI** with bottom navigation and beautiful gradients.
 
-## Expanding the ESLint configuration
+## Screenshots
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+### Home Feed
+![Home Feed](./screenshots/home.png)
 
-```js
-export default tseslint.config([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+### Skills Marketplace
+![Skills Marketplace](./screenshots/skills.png)
 
-      // Remove tseslint.configs.recommended and replace with this
-      ...tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      ...tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      ...tseslint.configs.stylisticTypeChecked,
+### Events
+![Events](./screenshots/events.png)
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+### Groups
+![Groups](./screenshots/groups.png)
+
+## Tech Stack
+- React + TypeScript
+- Vite
+- Tailwind CSS
+- React Router DOM
+- Lucide React Icons
+
+## Getting Started
+1. Install dependencies:
+  ```sh
+  npm install
+  ```
+2. Start the development server:
+  ```sh
+  npm run dev
+  ```
+3. Open [http://localhost:5173](http://localhost:5173) in your browser.
+
+## Folder Structure
+```
+neighborly-app/
+├── src/
+│   ├── components/
+│   ├── pages/
+│   ├── hooks/
+│   ├── context/
+│   ├── types/
+│   ├── utils/
+│   └── data/
+├── public/
+└── package.json
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+## License
+MIT
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+---
 
-export default tseslint.config([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+> **Note:** Screenshots are for demonstration. UI may vary as features evolve.
